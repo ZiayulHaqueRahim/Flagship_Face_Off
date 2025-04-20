@@ -14,8 +14,8 @@ const Hero = ({data,overallPhone,setOverallPhones}) => {
           return setOverallPhones(data);
         }
         const searchedPhones = overallPhone.filter(phone=>
-            phone.name.toLowerCase().split(' ').includes(text.toLowerCase()) ||
-            phone.brand.toLowerCase().split(' ').includes(text.toLowerCase())
+            phone?.name?.toLowerCase().split(' ').includes(text.toLowerCase()) ||
+            phone?.brand?.toLowerCase().split(' ').includes(text.toLowerCase())
         )
       
         setOverallPhones(searchedPhones);
