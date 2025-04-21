@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 
-const PhoneCard = ({ phone }) => {
+const PhoneCard = ({ phone , deletable}) => {
   const { brand, storage, id, name, price, camera_info, description, image } = phone || {};
 
 
@@ -55,6 +55,9 @@ const PhoneCard = ({ phone }) => {
             </span>
           </Link>
         </div>
+      </div>
+      <div className="absolute  -right-3 -top-3">
+        {deletable && <button className="cursor-pointer" >X</button>}
       </div>
     </div>
   );
